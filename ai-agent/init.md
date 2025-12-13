@@ -9,6 +9,24 @@ external project directories:
 2. `playwright` – automates web testing.
 3. `memory-bank` – stores AI rules, project settings, and global memory via the MCP protocol.
 
+Longer introduction:
+
+`ai-toolbox` is a production-ready toolkit of **Model Context Protocol (MCP)** servers designed to supercharge
+AI-assisted development workflows. It bundles three specialized services, all containerized and orchestrated via *
+*podman-compose**, with first-class support for mounting your existing projects and data from the host:
+
+- **`contex7`** – Documentation and context server that indexes and serves the latest project and external docs,
+  enabling AIs to search, browse, and retrieve precise snippets from mounted documentation directories.
+- **`playwright`** – Web-testing automation server powered by **Playwright**, capable of generating, running, and
+  inspecting end-to-end tests against web apps hosted in mounted project directories.
+- **`memory-bank`** – Persistent global memory server backed by **SQLite**, used to store AI rules, per-project
+  settings, and long-term context via a simple MCP interface.
+
+Each server is implemented with modern, maintainable patterns, featuring structured logging, robust error handling,
+configurable environment-based settings, and examples of test coverage. `ai-toolbox` is intended as a plug-and-play
+infrastructure layer for advanced AI agents and IDE integrations, making it easy to connect your projects,
+documentation, tests, and long-term memory into a cohesive, production-grade AI environment.
+
 ---
 
 ## 1. High-level goals
@@ -289,6 +307,7 @@ If anything is missing, **add it** before returning your final answer.
 - **Orchestration:** `podman-compose` with external directory mounts.
 - **Focus:** Production-ready implementation with tests, logging, and docs.
 
-This prompt should give the AI model enough detail to generate a complete, robust starting point for the `ai-toolbox` project.
+This prompt should give the AI model enough detail to generate a complete, robust starting point for the `ai-toolbox`
+project.
 
 ```
